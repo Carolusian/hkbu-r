@@ -1,0 +1,27 @@
+---
+title: "Check Image Sizes"
+output:
+  html_document: default
+  html_notebook: default
+---
+
+```{r, , fig.width=6, fig.height=8}
+files <- list.files()
+files <- files[grepl('20.*csv', files) == T]
+
+for(f in files) {
+  assign(f, read.csv(f, header=F))
+}
+
+par(mfrow = c(length(files), 1))
+breaks <- seq(from=0, to=1001, by=100)
+for(f in files) {
+  df <- get(f) / 1024
+  colnames(df) <- 'size'
+  df <- df[df$size < 1000, ]
+  h <- hist(df, breaks, plot=F)
+  h$density <- h$counts / sum(h$counts) * 100
+  plot(h, freq=F, main=paste('Image Size Distribution', f), xlab='Size in KB', ylab='Percent %')
+}
+```
+
