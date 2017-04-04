@@ -59,3 +59,34 @@ for(f in files) {
   plot(h, freq=F, main=paste('Image Size Distribution', f), xlab='Size in KB', ylab='Percent %')
 }
 ```
+
+# The 1st Case: Back Yourself for a New Feature
+
+TODO: Picture
+
+--- 
+
+# Why Do I Learn R?
+
+Why do I learn R when I already know other languages, e.g. Python?
+
+* Python is syntactically simplier
+* Python is more generic, and preferred among web and system developers
+* Python has better performance
+* Python has wider adoption, e.g. YouTube, DropBox, Quora, Pinterests, Disqus, Zhihu
+* I am more familiar with python
+* I spend more time in writing python code because of my job 
+* Python has a google data science packages, like pandas, nltk, scikit-learn
+
+---
+
+# Why Do I Learn R?
+
+* R directly does statistics 
+* Direct access to resources: CRAN, R-Bloggers and Books
+* R leads the way
+* Integration with document publishing is superior, even compare with IPython notebook
+
+> **Pick the language best fits the need**
+
+
