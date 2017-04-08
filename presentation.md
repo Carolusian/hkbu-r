@@ -1,5 +1,6 @@
 # R Case Studies from a Software Engineer
 ###### by Charlie Chen ( [@Carolusian](https://github.com/carolusian) )
+###### 21 Apr 2017 @ HKBU
 
 ---
 
@@ -86,7 +87,45 @@ Why do I learn R when I already know other languages, e.g. Python?
 * Direct access to resources: CRAN, R-Bloggers and Books
 * R leads the way
 * Integration with document publishing is superior, even compare with IPython notebook
+* R packages are written by persons who are stronger in statistics
 
 > **Pick the language best fits the need**
+> I mainly use Python for `raw data processing` and R for statistical evaluations. Updating and adjusting the input data pretty easy in Python. The analytical work is can be performaned interactively with the standardized input dataset.
 
+----
 
+# The 2nd Case: How I Start to Learn R
+
+##### Find something you can do in your life
+
+---
+
+# The 2nd Case: How I Start to Learn R
+
+* We have a balance sheet for lunch and dinner payments
+* Find what you can do with those data in that balance sheet
+* I decide to draw a simply wordcloud with R
+* Steps:
+  * Take a look at the data structures in the balance sheet
+  * Search online how to install R
+  * Search what packages can be used to draw a wordcloud
+  * Try it on your own data
+  * Manually clean your data
+  * Share the result with your colleagues
+
+--- 
+
+# The 3nd Case: Learn by Reading and Doing
+
+* I purchased a book on Amazon with the most few pages as I am lazy
+  * `Learn R in a Day`, by Steven Murray: http://amzn.to/2oF3H2K
+  * Flip through it
+  * Do a few of exercies on it to gain minimum viable skills to do projects
+  * Do a real project, either replicate others or do your own, see http://bit.ly/2nHK0mb (`Map Visualisation for Panama Papers and Offshore Leaks in R`)
+
+---
+
+# Some Gists
+
+* Get your hands dirty
+* Divide and Conquer you problems
