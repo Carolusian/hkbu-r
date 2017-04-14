@@ -4,27 +4,30 @@
 
 ---
 
-# The 1st Case: Back Yourself for a New Feature
+# The 1st Case: Identify the Reason of a Increase of CDN Cost
 
 * Background
-  * Increased AWS CloudFront CDN costs
-  * Increased loading time of the main site
+  * News website or apps commonly use card list to display news in a combination of news titles and **images**
+  * Images are normally hosted by CDN (Content Distribution Network)
+  * CDN service does cost money
 
 ---
 
-# The 1st Case: Back Yourself for a New Feature
+# The 1st Case: Identify the Reason of a Increase of CDN Cost
 
-* What to do?
-  * Make a guess
-  * Verify your guess using R
+* Background
+  * One day, I observed there was an increase of the CDN cost (the first blue bar).
+       ![](cloudfront-costs.png)
+  * I made a guess: the image size changed
+  * I wrote some R code to double check
 
 ---
 
-# The 1st Case: Back Yourself for a New Feature
+# The 1st Case: Identify the Reason of a Increase of CDN Cost
 
 ```bash
-aws s3 ls s3://{{bucket_name}} > {{yyyymm.txt}}
-cat {{yyyymm.txt}} | awk '{ print $3}'
+aws s3 ls s3://{{bucket_name}}/{{folder_path}} > {{yyyymm.txt}}
+cat {{yyyymm.txt}} | awk '{ print $3}' > {{yyyymm.csv}}
 ```
 
 ```r
@@ -35,12 +38,14 @@ df <- df[df$size < 1000, ]
 breaks <- seq(from=0, to=1001, by=100)
 h <- hist(df, breaks, plot=F)
 h$density <- h$counts / sum(h$counts) * 100
-plot(h, freq=F, main='Image Size Distribution 2017.03', xlab='Size in KB', ylab='Percent %')
+plot(h, freq=F, main='Image Size Distribution yyyy.mm', xlab='Size in KB', ylab='Percent %')
 ```
-
 ---
 
-# The 1st Case: Back Yourself for a New Feature
+# The 1st Case: 
+
+Parallel plot of image size distribution for different months
+
 ```r
 files <- list.files()
 files <- files[grepl('20.*csv', files) == T]
@@ -61,11 +66,13 @@ for(f in files) {
 }
 ```
 
+---
+
 # The 1st Case: Back Yourself for a New Feature
 
-TODO: Picture
+![](image_size_checker/img-parallel.png)
 
---- 
+---
 
 # Why Do I Learn R?
 
@@ -109,19 +116,73 @@ Why do I learn R when I already know other languages, e.g. Python?
   * Take a look at the data structures in the balance sheet
   * Search online how to install R
   * Search what packages can be used to draw a wordcloud
-  * Try it on your own data
   * Manually clean your data
+  * Try it on your own data
   * Share the result with your colleagues
 
 --- 
 
-# The 3nd Case: Learn by Reading and Doing
+# The 3rd Case: Learn by Reading and Doing
 
 * I purchased a book on Amazon with the most few pages as I am lazy
   * `Learn R in a Day`, by Steven Murray: http://amzn.to/2oF3H2K
   * Flip through it
   * Do a few of exercies on it to gain minimum viable skills to do projects
   * Do a real project, either replicate others or do your own, see http://bit.ly/2nHK0mb (`Map Visualisation for Panama Papers and Offshore Leaks in R`)
+
+---
+
+# The 3rd Case: Learn by Reading and Doing
+
+* The basic idea is to draw a heatmap on a map:
+  * Fortunately, we have the detailed addresses in the `Addresses.csv` file
+  * But unfortunately, a lot of the addresses are malformated, e.g.:
+    * no.84-1418; nanjing road; heping; tianjin; china
+    * guangdong vs guang dong
+    * zhejiang vs zhejing 
+  * The key question: how to clean and standardize the address data in provincial level?
+
+---
+
+# The 3rd Case: Learn by Reading and Doing
+
+* My solution is to calculate the distance between two strings
+* R has a package doing the calculation exactly: `stringdist`
+
+---
+
+# The 3rd Case: Learn by Reading and Doing
+
+* Result: TODO
+
+---
+
+# The 4th Case: Compile a User Survey Report with RMarkdown
+
+* Sample Screen Capture: TODO
+* Last year we have done a user survey;
+* Two skips are involved in this case:
+  * Use Python for raw data cleaning
+  * Use R to generate report
+
+---
+
+# The 4th Case: Compile a User Survey Report with RMarkdown
+
+* Roughly go through all steps
+* Scatter plot is very useful
+* Crosstab can helps a lot
+* More advanced data mining technic: association rules
+
+---
+
+# The 5th Case: Monitor Hosting Platform Cost with Shiny
+
+* Source Code: []
+
+---
+
+# The 6th Case: Financial Analytics
 
 ---
 
