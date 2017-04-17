@@ -42,7 +42,7 @@ plot(h, freq=F, main='Image Size Distribution yyyy.mm', xlab='Size in KB', ylab=
 ```
 ---
 
-# The 1st Case: 
+# The 1st Case: Identify the Reason of a Increase of CDN Cost
 
 Parallel plot of image size distribution for different months
 
@@ -68,7 +68,7 @@ for(f in files) {
 
 ---
 
-# The 1st Case: Back Yourself for a New Feature
+# The 1st Case: Identify the Reason of a Increase of CDN Cost
 
 ![](image_size_checker/img-parallel.png)
 
@@ -76,34 +76,59 @@ for(f in files) {
 
 # Why Do I Learn R?
 
-Why do I learn R when I already know other languages, e.g. Python?
+Why do I learn R when I already know other languages? e.g. Python
 
+* I am more familiar with python
+* I spend more time in writing python code because of my job 
 * Python is syntactically simplier
 * Python is more generic, and preferred among web and system developers
 * Python has better performance
 * Python has wider adoption, e.g. YouTube, DropBox, Quora, Pinterests, Disqus, Zhihu
-* I am more familiar with python
-* I spend more time in writing python code because of my job 
-* Python has a google data science packages, like pandas, nltk, scikit-learn
+* Python has good data science packages, like pandas, nltk, scikit-learn
+
+Above reasons show that Python seems a good candidate
+BUT, ...
+
+---
+
+# Why Do I Learn R?
+
+Personally, I believe the following are more important to myself:
+
+* Focus on the specific domain
+* Accessibility to correct resources
 
 ---
 
 # Why Do I Learn R?
 
 * R directly does statistics 
-* Direct access to resources: CRAN, R-Bloggers and Books
-* R leads the way
-* Integration with document publishing is superior, even compare with IPython notebook
 * R packages are written by persons who are stronger in statistics
+* Direct access to resources: CRAN, R-Bloggers and Books
+* Integration with document publishing is superior, even compare with IPython notebook
 
-> **Pick the language best fits the need**
-> I mainly use Python for `raw data processing` and R for statistical evaluations. Updating and adjusting the input data pretty easy in Python. The analytical work is can be performaned interactively with the standardized input dataset.
+---
+
+# Why Do I Learn R?
+
+![](r-nb-diff.png)
+**vs**
+![](ipython-nb-diff.png)
+
+---
+
+# Why Do I learn R?
+
+> **Pick the language best fits the need** : 1 + 1 > 2
+> I mainly use Python for `raw data processing` because updating and adjusting the input data pretty easy in Python. R is for statistical evaluations. The analytical work is can be performed interactively with the standardized input dataset.
 
 ----
 
 # The 2nd Case: How I Start to Learn R
 
-##### Find something you can do in your life
+##### Find some data that is relevant to your life, e.g. cash balance
+
+![](wordcloud/balance.jpg)
 
 ---
 
@@ -112,6 +137,13 @@ Why do I learn R when I already know other languages, e.g. Python?
 * We have a balance sheet for lunch and dinner payments
 * Find what you can do with those data in that balance sheet
 * I decide to draw a simply wordcloud with R
+
+  ![](wordcloud/resturant-cloud.png)
+
+---
+
+# The 2nd Case, How I Start to Learn R
+
 * Steps:
   * Take a look at the data structures in the balance sheet
   * Search online how to install R
