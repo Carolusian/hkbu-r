@@ -29,3 +29,4 @@ Session.vim
 .netrwhist
 *~
 
+.ipynb_checkpoints/

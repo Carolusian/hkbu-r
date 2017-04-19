@@ -40,6 +40,9 @@ fuzzy_province <- function(addrwords, provinces, dist = 0) {
         # The matrix distance should be equal or shorter than string length of province
         if (mtr[,1][i] + mtr[,1][i+1] <= str_length(province) + dist) {
           if(startsWith(province, addrwords[i]) & abs(str_length(province) - str_length(addrwords[i]) - str_length(addrwords[i+1])) <= dist ) {
+            print(addrwords)
+            print('===>')
+            print(province)
             return(province)
           }
         }
@@ -57,6 +60,9 @@ fuzzy_city<- function(addrwords, cities) {
       if(i<length(mtr[,1])) {
         if (mtr[,1][i] + mtr[,1][i+1] <= str_length(city)) {
           if(paste(addrwords[i], addrwords[i+1], sep="") == city){
+            print(addrwords)
+            print('===>')
+            print(city)
             return(city)
           }
         }
