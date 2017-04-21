@@ -263,7 +263,7 @@ class: middle
 
 # The 4th Case: Compile a User Survey Report with RMarkdown
 
-![](initium-user-survey-export/question-example.jpg)
+![](question-example.jpg)
 
 ---
 
@@ -280,7 +280,7 @@ class: middle
 # The 4th Case: Compile a User Survey Report with RMarkdown
 ##### Raw data processing: sparse matrix
 
-![](initium-user-survey-export/sparse-matrix.png)
+![](sparse-matrix.png)
 
 
 ---
