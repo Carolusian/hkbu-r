@@ -12,5 +12,3 @@ library(wordcloud)
 library(RColorBrewer)
 wordcloud(words=wordfreq$V2, freq=wordfreq$T, min.freq = 1, max.words=100, random.order=FALSE, scale=c(5,0.5),rot.per=0.35,colors=brewer.pal(8, "Dark2"))
 dev.off()
-
-
